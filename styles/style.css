@@ -76,6 +76,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 27px;
+    grid-column-gap: 27px;
     margin-left: 180px;
     margin-right: 210px;
 }
@@ -154,7 +155,7 @@ body{
 .top-story-3{
     height: 150px;
     width: 300px;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.250);
     text-align: center;
 }
 /* footer images and icons */
@@ -182,19 +183,34 @@ footer{
 
 /* design for phone and tablets */
 @media only screen and (max-width: 688px) {
-    .player-card-section, .top-stories, .header-design, .top-story-grid, footer{
+    .player-card-section, .top-stories, .header-design, .top-story-grid, footer, .top-story-1-img{
         width: 100%;
         grid-template-columns: repeat(1,1fr);
     }
     .title-banner, .top-story-1{
-        align-items: center;
         width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
+        flex-direction: column;
+    }
+    .header-title, .top-story-1-summary, .player-card-section, .banner{
+        margin: 0;
+        padding: 0;
+    }
+    .header-design{
+        height: 1000px;
+    }
+    .header-title h1{
+        font-size: 57px;
+
     }
     .banner{
         transform: scale(.5);
+    }
+    .title{
+        font-size: 40px;
+    }
+    .top-story-1-img{
+        height: 150px;
+        width: 150px;
     }
 }
 @media only screen and (min-width: 689px) and (max-width: 992px) {
