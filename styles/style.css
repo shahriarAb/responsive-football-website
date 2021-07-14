@@ -70,7 +70,7 @@ body{
     margin-left: 190px;
     margin-right: 175px;
     margin-top: 75px;
-    background-image: linear-gradient(to right, #fdfd8e, #ff9292);
+    background-image: linear-gradient(to right, #fdfd8e, #dd6767d0, #ff929200);
 }
 .player-card-section{
     display: grid;
