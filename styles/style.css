@@ -57,7 +57,7 @@ body{
 .go-to-button2:hover{
     background-color: pink;
     color: #464243;
-    transition: background-color 0.5s ease-out;
+    transition: background-color .8s ease-out;
 }
 .banner:hover img
 {
@@ -143,7 +143,20 @@ body{
     height: 427px;
     margin-right: 156px;
 }
-
+.top-story-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    margin-left: 250px;
+    margin-top: 40px;
+}
+.top-story-2,
+.top-story-3{
+    height: 150px;
+    width: 300px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
 /* footer images and icons */
 footer{
     margin-top: 158px;
@@ -165,4 +178,29 @@ footer{
     font-size: 18px;
     font-weight: 400;
     margin-top: 0px;
+}
+
+/* design for phone and tablets */
+@media only screen and (max-width: 688px) {
+    .player-card-section, .top-stories, .header-design, .top-story-grid, footer{
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .title-banner, .top-story-1{
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .banner{
+        transform: scale(.5);
+    }
+}
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .player-card-section, .top-stories, .header-design, .top-story-grid, footer{
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+    }
+    
 }
